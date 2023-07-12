@@ -1,11 +1,25 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
   return (
     <div>
         {/* Do not remove the main div */}
+        Parent Components
+
+        {isLoggedIn ? 
+          <p>You are logged in!</p>
+          : <>
+          <label>Username: <input type="text" /> </label>
+          <label>Password: <input type="password" /> </label>
+          <button onClick={() => setIsLoggedIn(true)} >Login</button>
+        </> 
+        }
     </div>
   )
 }
