@@ -14,11 +14,13 @@ const App = () => {
 
         {isLoggedIn ? 
           <p>You are logged in!</p>
-          : <>
-          <label>Username: <input type="text" /> </label>
-          <label>Password: <input type="password" /> </label>
-          <button onClick={() => setIsLoggedIn(true)} >Login</button>
-        </> 
+          :
+          <form>
+            <label>Username: <input type="text" /> </label>
+            <label>Password: <input type="password" /> </label>
+            <button onClick={() => setIsLoggedIn(true)} >Login</button>
+          </form>
+    
         }
     </div>
   )
